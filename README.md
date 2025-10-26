@@ -1,9 +1,21 @@
-# minute_inbox.sh
-Web-API for [minuteinbox.com](https://www.minuteinbox.com) an 10 minute mail service that provides temporary emails
+# Yagla.cs
+Web-API for [yagla.ru](https://yagla.ru/) an website that serves as link shortening tool
 
 ## Example
-```bash
-source ./minute_inbox.sh
-get_session_id
-generate_email
+```cs
+using System;
+using YaglaApi;
+
+namespace Application
+{
+    internal class Program
+    {
+        static async Task Main()
+        {
+            var api = new Yagla();
+            string shortLink = await api.GenerateShortLink("https://example.com");
+            Console.WriteLine(shortLink);
+        }
+    }
+}
 ```
