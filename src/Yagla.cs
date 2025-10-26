@@ -20,8 +20,8 @@ namespace YaglaApi
 
         public async Task<string> GenerateShortLink(string link)
         {
-            var data = JsonContent.Create(new { link = link });
-            var response = await httpClient.PostAsync($"{apiUrl}/generateShortLink", data);
+            var response = await httpClient.PostAsync(
+                $"{apiUrl}/generateShortLink", JsonContent.Create(new { link = link }));
             return await response.Content.ReadAsStringAsync();
         }
     }
