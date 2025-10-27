@@ -3,7 +3,6 @@ Web-API for [yagla.ru](https://yagla.ru/) an website that serves as link shorten
 
 ## Example
 ```cs
-using System;
 using YaglaApi;
 
 namespace Application
